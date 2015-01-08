@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pics
+
   devise_for :admins
   root "pages#home" 
 
