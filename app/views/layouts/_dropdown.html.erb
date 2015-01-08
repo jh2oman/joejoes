@@ -4,7 +4,11 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+    <% if admin_signed_in? %>
+    <li><%= link_to "Admin Logout", destroy_admin_session_path, method: :delete %></li>
+    <%else%>
+    <li><%= link_to "Admin", admin_session_path %></li>
+    <%end%>
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
