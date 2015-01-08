@@ -1,0 +1,34 @@
+$body-bg: #ecf0f1;
+$dropdown-fallback-border: #27ae60;
+$dropdown-link-color: white;
+$dropdown-bg: #27ae60;
+$brand-primary: #f39c12;
+
+@import 'bootstrap';
+
+
+.wide {
+  width:100%;
+  height:200px;
+  background-image:url(assets/images/cover1.jpg);
+  background-size:cover;
+}
+
+.wide img {
+  width:100%;
+}
+
+.logo {
+  color:#fff;
+  font-weight:800;
+  font-size:14pt;
+  padding:25px;
+  text-align:center;
+}
+
+.line {
+  padding-top:20px;
+  white-space:no-wrap;
+  overflow:hidden;
+  text-align:center;
+}
