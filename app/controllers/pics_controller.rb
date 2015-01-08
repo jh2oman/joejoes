@@ -13,7 +13,7 @@ class PicsController < ApplicationController
   end
 
   def new
-    @pic = Pic.new
+    @pic = current_admin.pics.build
     respond_with(@pic)
   end
 
@@ -21,7 +21,7 @@ class PicsController < ApplicationController
   end
 
   def create
-    @pic = Pic.new(pic_params)
+    @pic = current_admin.pics.build(pic_params)
     @pic.save
     respond_with(@pic)
   end
@@ -42,6 +42,6 @@ class PicsController < ApplicationController
     end
 
     def pic_params
-      params.require(:pic).permit(:description)
+      params.require(:pic).permit(:description, :image)
     end
 end
