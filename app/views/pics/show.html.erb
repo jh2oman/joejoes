@@ -1,9 +1,18 @@
-<%= image_tag @pic.image.url(:large) %>
-
-<p>
-  <strong>Description:</strong>
-  <%= @pic.description %>
-</p>
-
-<%= link_to 'Edit', edit_pic_path(@pic) %> |
 <%= link_to 'Back', pics_path %>
+
+
+  
+
+        <div class="box2 panel panel-default center">
+      <%= image_tag @pic.image.url(:large) %>
+      <div class = "panel-body text-center">
+      <%= @pic.description %>
+      <% if @pic.admin == current_admin %>
+        <%= link_to 'Edit', edit_pic_path(@pic) %>
+        <%= link_to 'Destroy', @pic, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    </div>
+    </div>
+
+
+
