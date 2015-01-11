@@ -1,7 +1,5 @@
 <div class="wide">
-  	<div class="col-xs-5 line"><hr></div>
-    <div class="col-xs-2 logo">Logo</div>
-    <div class="col-xs-5 line"><hr></div>
+    <div class="logo">Logo</div>
 </div>
 
 <div class="container">
@@ -12,3 +10,7 @@
 <h1>Welcome to my app!</h1>
 <p>Sign up here.</p>
 <%= link_to "about page", about_path %>
+<%= link_to "new pic", pics_path %>
+<% if admin_signed_in? %>
+<%= link_to "edit admin", edit_admin_registration_path %>
+<%end%>
