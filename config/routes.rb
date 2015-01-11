@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :pics
 
   devise_for :admins
-  root "pages#home" 
+  root "pics#index" 
 
   get "about" =>"pages#about"
 
