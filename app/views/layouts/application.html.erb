@@ -9,15 +9,15 @@
 </head>
 <body>
 
-<%= render 'layouts/dropdown' %>
-<div class = "container">
+<%= render 'layouts/navbar' %>
+
 <%= yield %>
 
 <% flash.each do |name, msg| %>
      <%= content_tag(:div, msg, class: "alert alert-info") %>
 <% end %>
 
-</div>
+
 
 </body>
 </html>
